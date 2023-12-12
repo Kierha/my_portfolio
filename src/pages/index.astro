@@ -26,84 +26,71 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
-				<Hero
-					title="Bonjour, je m'appelle Thomas DIETRICH"
-					tagline="Je suis un étudiant en Mastère 1 Logiciel Mobile et IoT à Ynov Campus Lyon. En paralèlle je suis en alternance chez Capgemini Engineering en tant que développeur fullstack."
-					align="start"
-				>
-					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-					</div>
-				</Hero>
+    <div class="stack gap-20 lg:gap-48">
+        <div class="wrapper stack gap-8 lg:gap-20">
+            <header class="hero">
+                <Hero
+                    title="Bonjour, je suis Thomas Dietrich"
+                    tagline="Développeur passionné en Logiciel Mobile et IoT, actuellement en alternance chez Capgemini Engineering."
+                    align="start"
+                >
+                    <div class="roles">
+                        <Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
+                        <Pill><Icon icon="trophy" size="1.33em" /> Mastère 1</Pill>
+                        <Pill><Icon icon="rocket-launch" size="1.33em" /> Apprenant Rapide</Pill>
+                    </div>
+                </Hero>
 
-				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/>
-			</header>
+                <img
+                    alt="Thomas Dietrich"
+                    width="480"
+                    height="620"
+                    src="/assets/portrait.jpg"
+                />
+            </header>
 
-			<Skills />
-		</div>
+            <Skills />
+        </div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
-				</header>
+        <main class="wrapper stack gap-20 lg:gap-48">
+            <section class="section with-background with-cta">
+                <header class="section-header stack gap-2 lg:gap-4">
+                    <h3>Projets Sélectionnés</h3>
+                    <p>Découvrez ci-dessous certains de mes travaux récents pour les clients au cours des dernières années.</p>
+                </header>
 
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
+                <div class="gallery">
+                    <Grid variant="offset">
+                        {
+                            projects.map((project) => (
+                                <li>
+                                    <PortfolioPreview project={project} />
+                                </li>
+                            ))
+                        }
+                    </Grid>
+                </div>
 
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
+                <div class="cta">
+                    <CallToAction href="/work/">
+                        Voir Tous
+                        <Icon icon="arrow-right" size="1.2em" />
+                    </CallToAction>
+                </div>
+            </section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
+            <section class="section with-background bg-variant">
+                <header class="section-header stack gap-2 lg:gap-4">
+                    <h3>À Propos de Moi</h3>
+                    <p>
+                        Passionné par le développement logiciel et l'innovation, je suis toujours à la recherche de nouveaux défis techniques. Découvrez mon parcours et mes compétences.
+                    </p>
+                </header>
+            </section>
+        </main>
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
-	</div>
+        <ContactCTA />
+    </div>
 </BaseLayout>
 
 <style>

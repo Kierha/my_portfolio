@@ -11,29 +11,130 @@ import Grid from '../components/Grid.astro';
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
----
 
-<BaseLayout
-	title="My Work | Jeanine White"
-	description="Learn about Jeanine White's most recent projects"
->
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
-	</div>
+const projectImages = {
+    trinity: '/assets/image.jpg',
+    komer: '/assets/image.jpg',
+    rnd: '/assets/image.jpg'
+};
+---
+<BaseLayout title="Projets de Thomas Dietrich" description="Aperçu des projets significatifs de Thomas Dietrich">
+    <div class="stack gap-20">
+        <main class="wrapper">
+            <Hero
+                title="Mes Projets"
+                tagline="Découvrez mes projets récents et mon expérience en R&D."
+                align="start"
+            />
+
+            <!-- Section Projets Personnels -->
+            <section>
+                <h2 class="section-title">Projets Personnels</h2>
+                <div class="project">
+                    <img src={projectImages.trinity} alt="Trinity Project" />
+                    <h3>Trinity</h3>
+                    <p>
+                        Application mobile Flutter pour la gestion de la consommation d'alcool. <a href="https://github.com/Kierha/Trinity-1" target="_blank">Voir sur GitHub</a>.
+                    </p>
+                </div>
+                <div class="project">
+                    <img src={projectImages.komer} alt="Komer Project" />
+                    <h3>Komer</h3>
+                    <p>
+                        Application de suivi nutritionnel développée en Flutter. <a href="https://gitlab.com/Kierhann/komer_track/-/tree/master?ref_type=heads" target="_blank">Voir sur GitLab</a>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section Projets Professionnels -->
+            <section>
+                <h2 class="section-title">Projets Professionnels chez Capgemini Engineering</h2>
+                <!-- Projet 1 -->
+                <div class="project">
+                    <img src="/assets/image.jpg" alt="Projet Supervision Laboratoire" />
+                    <h3>Supervision Laboratoire</h3>
+                    <p>
+                        Projet de supervision pour un laboratoire de test de résistance, utilisant la suite AVEVA.
+                    </p>
+                </div>
+                <!-- Projet 2 -->
+                <div class="project">
+                    <img src="/assets/image.jpg" alt="Projet Industrie Textile" />
+                    <h3>Industrie Textile</h3>
+                    <p>
+                        Projet de supervision pour une industrie textile, intégrant une nouvelle ligne de production dans la supervision existante.
+                    </p>
+                </div>
+                <!-- Projet 3 -->
+                <div class="project">
+                    <img src="/assets/image.jpg" alt="Projet Contrôle Qualité" />
+                    <h3>Contrôle Qualité et Gestion des Stocks</h3>
+                    <p>
+                        Développement d'un logiciel pour superviser le contrôle qualité de la production et la gestion des stocks, combinant des solutions Aveva et MES.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section Participation en R&D -->
+            <section>
+                <h2 class="section-title">Participation en R&D</h2>
+                <div class="project">
+                    <img src={projectImages.rnd} alt="R&D Project" />
+                    <p>
+                        Étude des tendances et nouveautés dans le domaine de la supervision, MES, SCADA, et l'impact de l'IA dans l'aide à la décision. Rédaction d'un dossier couvrant des sujets tels que l'hypervision et les usines 4.0.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <ContactCTA />
+    </div>
 </BaseLayout>
+
+<style>
+    .wrapper {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        color: var(--gray-0); 
+        margin-bottom: 15px;
+        text-align: center; 
+    }
+
+    .project {
+        margin-bottom: 40px;
+    }
+
+    .project img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+    }
+
+    .project p {
+        font-size: 1.2rem;
+        color: var(--gray-200); 
+        line-height: 1.6;
+    }
+
+    a {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>

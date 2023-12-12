@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<BaseLayout title="Compétences de Thomas Dietrich" description="Détails des compétences techniques et personnelles de Thomas Dietrich">
+    <div class="stack gap-20">
+        <main class="wrapper">
+            <!-- Section Compétences Techniques -->
+            <section>
+                <h2 class="section-title">Compétences Techniques</h2>
+                <div class="content">
+                    <p>
+                        Maîtrise de JavaScript, Flutter, SQL, NoSQL, et VBScript, avec une application pratique dans des projets tels que Trinity, une application mobile innovante pour la gestion de la consommation d'alcool. Expérience avec Firebase et Node.js, et des notions de Docker et React.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section Gestion de Projet et Méthodologies -->
+            <section>
+                <h2 class="section-title">Gestion de Projet et Méthodologies</h2>
+                <div class="content">
+                    <p>
+                        Expérience avérée avec la méthodologie AGILE SCRUM, mise en œuvre dans des projets académiques et professionnels. Utilisation efficace d'outils comme Trello et Jira pour une gestion de projet optimisée.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section Qualités Personnelles -->
+            <section>
+                <h2 class="section-title">Qualités Personnelles</h2>
+                <div class="content">
+                    <p>
+                        Autonomie, flexibilité, et une forte capacité de recherche et de rédaction. Passionné par l'IA et l'apprentissage continu, je suis particulièrement intéressé par l'exploration des applications pratiques de technologies comme ChatGPT, notamment dans l'automatisation des tâches et l'amélioration des interactions utilisateurs, ainsi que par le potentiel du deep learning dans le traitement de grandes quantités de données. Mon parcours en sciences politiques, aux échecs, et dans les jeux vidéo a façonné ma capacité d'autonomie et d'auto-amélioration, me permettant d'apporter des perspectives innovantes dans ces domaines.
+                    </p>
+                </div>
+            </section>
+            
+        </main>
+
+        <ContactCTA />
+    </div>
+</BaseLayout>
+<style>
+    .wrapper {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        color: var(--gray-0); 
+        margin-bottom: 15px;
+        text-align: center; 
+    }
+
+    .content {
+        font-size: 1.2rem;
+        color: var(--gray-200); 
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: justify; 
+    }
+
+    .content p {
+        margin-bottom: 15px;
+    }
+
+    @media (min-width: 50em) {
+       

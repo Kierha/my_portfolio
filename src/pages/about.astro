@@ -5,61 +5,60 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<BaseLayout title="À propos de Thomas Dietrich" description="En savoir plus sur Thomas Dietrich, développeur passionné en Logiciel Mobile et IoT">
+    <div class="stack gap-20">
+        <main class="wrapper about">
+            <!-- Hero Section -->
+            <Hero
+                title="À propos de moi"
+                tagline="Découvrez mon parcours et mes passions."
+            >
+                <img
+                    width="1553"
+                    height="873"
+                    src="/assets/at-work.jpg"
+                    alt="Thomas Dietrich au travail"
+                />
+            </Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl
-						condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu
-						odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum
-						dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+            <!-- Section Mon Parcours -->
+            <section>
+                <h2 class="section-title">Mon Parcours</h2>
+                <div class="content">
+                    <p>
+                        Après une introspection profonde, j'ai quitté le monde de la politique pour me plonger dans l'informatique, un domaine qui a toujours été une source d'évasion pour moi. Inspiré par l'impact du Big Data et les perspectives d'avenir en Data Science, j'ai embrassé cette passion pour en faire ma carrière.
+                    </p>
+                    <p>
+                        Actuellement en Mastère 1 pour un Master Expert en développement Logiciel Mobile et IoT, je suis en alternance chez Capgemini Engineering, où je travaille sur des solutions MES/supervision dans le domaine industriel.
+                    </p>
+                </div>
+            </section>
 
-		<ContactCTA />
-	</div>
+            <!-- Section Formation -->
+            <section>
+                <h2 class="section-title">Formation</h2>
+                <div class="content">
+                    <p>
+                        Mon parcours académique en sciences politiques et en marketing/web a enrichi ma perspective sur la technologie. Mes études actuelles en développement logiciel me permettent d'explorer en profondeur des langages tels que JavaScript, PHP, Dart, Java, et plus encore.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section Philosophie Personnelle -->
+            <section>
+                <h2 class="section-title">Philosophie Personnelle</h2>
+                <div class="content">
+                    <p>
+                        "Le plaisir dans le travail met la perfection dans l'œuvre." - Aristote
+                        <br>
+                        Passionné par les défis techniques et l'innovation, je suis animé par une soif d'apprendre et d'améliorer continuellement mes compétences. Mon intérêt pour l'IA et l'intelligence artificielle est un domaine que j'aspire à explorer davantage dans l'avenir.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <ContactCTA />
+    </div>
 </BaseLayout>
 
 <style>
